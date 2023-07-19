@@ -1,0 +1,459 @@
+* {
+    box-sizing: border-box;
+}
+@font-face {
+    font-display: swap;
+    font-family: "Futura PT";
+    font-style: normal;
+    font-weight: 400;
+    src: url("./fonts/FuturaPT-Book.woff2") format("woff2"),
+    url("./fonts/FuturaPT-Book.woff") format("woff");
+    
+}
+@font-face {
+    font-display: swap;
+    font-family: "Futura PT";
+    font-weight: 500;
+    src: url("./fonts/FuturaPT-Medium.woff2") format("woff2"),
+    url("./fonts/FuturaPT-Medium.woff") format("woff");
+    
+}
+@font-face {
+    font-display: swap;
+    font-family: "Futura PT";
+    font-weight: 700;
+    src: url("./fonts/FuturaPT-Bold.woff2") format("woff2"),
+    url("./fonts/FuturaPT-Bold.woff") format("woff");
+}
+body {
+    margin: 0;
+    font-family: "Futura PT";
+    font-weight: 400;
+    background-image: url(./images/backgroundimage.png);
+}
+
+img {
+    display: block;
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    border: 0;
+}
+/* header site */
+.container-header {
+    width: 1230px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+.header-site {
+    padding-bottom: 146px;
+    position: relative;
+    z-index: 5;
+}
+.header-top {
+    display: flex;
+    justify-content: flex-end;
+    padding-top: 12px;
+    padding-bottom: 14px;   
+    background-color: #F9F8F8;     
+}
+.address-link {
+    margin-right: 106px;
+    text-decoration: none;
+    color: #333;
+    font-size: 14px;
+    font-family: Futura PT;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal; 
+}
+.contact-address-link {
+    margin-right: 106px;
+    text-decoration: none;
+    color: #333;
+    font-size: 14px;
+    font-family: Futura PT;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal; 
+}
+.address-link::before {
+    content: url(./images/addressicon.svg);
+    margin-right: 9px;
+}
+.tel-number-list {
+    display: flex;
+    margin: 0px;
+    margin-right: 98px;
+    padding: 0px;
+    list-style: none;
+    gap: 13px;
+}
+.tel-number-first::before {
+    content: url(./images/telicon.svg);
+    margin-right: 9px;
+}
+.tel-number-item-middle::before {
+    content: url(./images/ellipse.svg);
+    margin-right: 9px;
+}
+.tel-number-item-middle::after {
+    content: url(./images/ellipse.svg);
+    margin-left: 9px;
+}
+.tel-number {
+    color: #333;
+    font-size: 14px;
+    font-family: Futura PT;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    text-decoration: none;
+}
+.tel-number:hover {
+    color: #ffbd54;
+    transition: color, 0.4s ease;
+}
+.tel-number:active {
+    opacity: 0.6;
+}
+.time-list {
+    display: flex;
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+}
+.time-item {
+    margin-right: 17px;
+}
+.date-text {
+    color: #333;
+    font-family: Futura PT;
+    font-size: 14px;
+    line-height: normal;
+}
+.date-text-first::before {
+    content: url(./images/dateicon.svg);
+    margin-right: 7px;
+}
+.time-item:nth-child(2) {
+    margin-right: 0px;
+}
+.time-text {
+    color: #333;
+    font-size: 14px;
+    font-family: Futura PT;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+/* header bottom  */
+.header-bottom {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 15px;
+    padding-bottom: 20px;
+    position: relative;
+    background-color: #fff;
+}
+.vetclinic-logo {
+    position: absolute;
+    top: calc(50% - 50px);
+    right: calc(50% + 540px);
+}
+.vetclinic-logo:hover {
+    opacity: 0.8;
+}
+.vetclinic-logo:active {
+    opacity: 0.6;
+}
+.nav-link-first::before {
+    content: url(./images/fishicon.svg);
+    margin-right: 12px;
+}
+.navbar {
+    margin-right: 163px;
+    margin-left: auto;    
+}
+.nav-link {
+    margin-right: 55px;
+    color: #333;
+    font-size: 16px;
+    font-family: Futura PT;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    text-decoration: none;
+}
+.nav-link:hover {
+    border-bottom: 5px solid #fafa33;
+    transition: color, 0.1s ease;
+}
+.nav-link:active {
+    opacity: 0.6;
+}
+.nav-link-end {
+    margin-right: 0px;
+}
+.send-question-button {
+    color: #333;
+    text-align: right;
+    font-size: 16px;
+    font-family: Futura PT;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    text-decoration: none;
+}
+.send-question-button:hover {
+    color: #ffbd54;
+    transition: color, 0.4s ease;
+}
+.send-question-button:active {
+    opacity: 0.6;
+}
+.send-question-button::before {
+    content: url(./images/peticon.svg);
+}
+/* section contact  */
+.container-section-contact {
+    width: 1230px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+.section-contact {
+    padding-bottom: 121px;
+}
+.section-contact-wrap {
+    display: flex;
+}
+.contact-box-title {
+    margin: 0px;
+    margin-bottom: 27px;
+    color: #333;
+    font-family: Futura PT;
+    font-size: 70px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 64px;
+}
+.contact-box-text-wrap {
+    width: 447px;
+    margin-bottom: 122px;
+}
+.contact-box-text {
+    margin: 0px;
+    color: #949494;
+    font-family: Futura PT;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px;
+}
+.contact-bottom-box {
+    display: flex;
+}
+.section-contact-address-link {
+    margin-right: 118px;
+    text-decoration: none;
+    color: #333;
+    font-size: 14px;
+    font-family: Futura PT;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal; 
+}
+.section-contact-address-link::before {
+    content: url(images/location-icon.svg);
+    display: flex;
+    margin-bottom: 30px;
+}
+.contact-time-list {
+    margin: 0px;
+    margin-right: 119px;
+    padding: 0px;
+    list-style: none;
+}
+.contact-time-item {
+    margin-right: 0px;
+}
+.contact-time-list::before  {
+    content: url(images/calendar-icon.svg);
+    display: flex;  
+    margin-bottom: 30px;
+}
+.contact-tel-number-list {
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+}
+.contact-tel-number-list::before {
+    content: url(images/phone-icon.svg);
+    display: flex;
+    margin-bottom: 30px;
+}
+.contact-time-item {
+    display: flex;
+    align-items: center;
+}
+.contact-date-text {
+    margin: 0px;
+    color: #333;
+    font-family: Futura PT;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+.section-contact-img {
+    margin-left: auto;
+    margin-top: -100px;
+}
+/* section location  */
+.section-location {
+    padding-top: 220px;
+    padding-bottom: 206px;
+}
+.section-location-title {
+    margin: 0px;
+    margin-bottom: 60px;
+    
+    color: #333;
+    font-family: Futura PT;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-align: center;
+}
+.section-location-title::before {
+    content: url(images/adress-bg.svg);
+    display: flex;
+    position: absolute;
+    top: calc(100% - -50px);
+    right: calc(100% - 1440px);
+}
+.location-box {
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+.location-box::before {
+    content: url(images/kisspng-pug-puppy.png);
+    position: absolute;
+    top: calc(100% - 760px);
+    right: calc(100% - 470px);
+}
+/* footer site */
+.footer-site {
+    padding: 54px 65px 23px 65px;
+    background-color: #f3f3f3;
+}
+.container-footer {
+    width: 1230px;
+    margin: 0 auto;
+    padding: 0 20px; 
+}
+.footer-box {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 28px;
+    align-items: center;
+}
+.footer-vetclinic-logo:hover {
+    opacity: 0.8;
+}
+.footer-vetclinic-logo:active {
+    opacity: 0.6;
+}
+.footer-list-wrap {
+    display: flex;
+}
+.footer-nav-list {
+    margin: 0px;
+    margin-right: 87px;
+    padding: 0px;
+    list-style: none;
+}
+.footer-nav-list-end {
+    margin-right: 0px;
+}
+.footer-nav-item {
+    margin-bottom: 14px;
+    color: #333;
+    font-family: Futura PT;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+.footer-nav-item:hover {
+    color: #ffbd54;
+}
+.footer-nav-item:active {
+    opacity: 0.6;
+}
+.footer-nav-item-end {
+    margin-bottom: 0px;
+}
+.footer-time-list {
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+}
+.footer-date-text {
+    color: #333;
+    font-family: Futura PT;
+    font-size: 14px;
+    line-height: normal;
+}
+.footer-date-text-first::before {
+    content: url(./images/dateicon.svg);
+    margin-right: 14px;
+}
+.footer-date-text-sec {
+    margin-left: 32px;
+}
+.footer-address-link {
+    color: #333;
+    font-family: Futura PT;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    text-decoration: none;
+}
+.footer-address-link:hover {
+    color: #ffbd54;
+}
+.footer-address-link:active {
+    opacity: 0.6;
+}
+.footer-address-link::before {
+    content: url(./images/addressicon.svg);
+    margin-right: 9px;
+}
+.footer-tel-number-list {
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+}
+.copyright-site {
+    display: flex;
+    justify-content: flex-end;
+    padding-bottom: 23px;
+    color: #5c5c5c;
+    text-align: right;
+    font-family: Futura PT;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
